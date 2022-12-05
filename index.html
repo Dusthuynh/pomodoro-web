@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro and Fireplace Sounds</title>
+    <link rel="icon" href="img/logoweb.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main">
+        <div id = "audio">
+            <audio id="audioPlayer" controls controlsList="nodownload" loop>
+                <source src="audio/Relaxing_Fireplace_Sounds_cut.mp3" type="audio/mpeg">
+            </audio>
+
+
+            <label  id="labelVolume" for="Volume">Volume: <span class="titleVolume">100%</span></label><br>
+            <input type="range" min="0" max="100" value="100" name ="Volume" class="sliderVolume" id="audioVolume">
+
+        </div>
+        <div id="pomodoro">
+            <audio id="startSound" controls controlsList="nodownload" style="display: none;">
+                <source class="startSound1" src="audio/startSound.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="breakSound" controls controlsList="nodownload" style="display: none;">
+                <source class="startSound1" src="audio/breakSound.mp3" type="audio/mpeg">
+            </audio>
+
+            
+            <div class="time" id="time1">
+                <label id="hours">00</label>
+                <label id="colon">:</label>
+                <label id="minutes">00</label>
+                <label id="colon">:</label>
+                <label id="seconds">00</label>
+            </div>
+            <div id="btnTime">
+                <input class="btn start" type="button" value="Start" >
+                <input class="btn pause" type="button" value="Pause" >
+                <input class="btn stop" type="button" value="Stop" >
+                <input class="btn reset" type="button" value="Reset" >
+            </div>
+            <div id="today"></div>
+            <div class= "btnCamera ">
+                <input class="btn cam" type="button" value="Camera" >
+            </div>
+            <div id="cam">
+                <video id="video" width="640" height="480" ></video>
+            </div>
+            
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
